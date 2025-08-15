@@ -1,0 +1,39 @@
+class AllInOnePrinter:
+    def print_document(self):
+        print("Printing")
+
+    def scan_document(self):
+        print("Scanning")
+
+    def fax_document(self):
+        print("Faxing")
+from typing import Protocol
+
+class Printer(Protocol):
+    def print_document(self):
+        ...
+
+class Scanner(Protocol):
+    def scan_document(self):
+        ...
+
+class Fax(Protocol):
+    def fax_document(self):
+        ...
+
+class AllInOnePrinter:
+    def print_document(self):
+        print("Printing")
+
+    def scan_document(self):
+        print("Scanning")
+
+    def fax_document(self):
+        print("Faxing")
+
+class SimplePrinter:
+    def print_document(self):
+        print("Simply Printing")
+
+def do_the_print(printer: Printer):
+    printer.print_document()
